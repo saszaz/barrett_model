@@ -43,12 +43,12 @@
       </actuator>
     </transmission>
 
-    <transmission name="${prefix}/wrist_yaw_joint_trans">
+    <transmission name="${prefix}/wrist_yaw_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}/wrist_yaw_joint_joint">
+      <joint name="${prefix}/wrist_yaw_joint">
         <hardwareInterface>PositionJointInterface</hardwareInterface>
       </joint>
-      <actuator name="${prefix}/wrist_yaw_joint_motor">
+      <actuator name="${prefix}/wrist_yaw_motor">
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>

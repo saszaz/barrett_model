@@ -3,6 +3,7 @@
 <!-- Not needed for new Gazebo (http://gazebosim.org/tutorials/?tut=ros_urdf) -->
   <!-- xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"> -->
 
+  <xacro:include filename="$(find barrett_model)/robots/common.gazebo.xacro" />
   <!-- Some macros used by the WAM urdf -->
   <xacro:include filename="$(find barrett_model)/models/common.urdf.xacro"/>
   <!-- Definition of a single WAM arm -->
