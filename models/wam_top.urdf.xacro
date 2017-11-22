@@ -1,6 +1,7 @@
 <robot 
-  xmlns:xacro="http://www.ros.org/wiki/xacro"
-  xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller">
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
+<!-- Not needed for new Gazebo (http://gazebosim.org/tutorials/?tut=ros_urdf) -->
+  <!-- xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"> -->
 
   <!-- Some macros used by the WAM urdf -->
   <xacro:include filename="$(find barrett_model)/models/common.urdf.xacro"/>
@@ -12,6 +13,7 @@
   <xacro:include filename="$(find barrett_model)/models/hand.urdf.xacro"/>
   <!-- Definitions for the barrett ball -->
   <xacro:include filename="$(find barrett_model)/models/ball.urdf.xacro"/>
+  
 
   <!-- Materials -->
   <material name="WAMGrey">

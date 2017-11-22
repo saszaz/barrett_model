@@ -387,6 +387,7 @@
     </link>
   </xacro:macro>
 
+
   <!-- Hollow forearm macros -->
   <!--<xacro:macro name="wam_hollow_forearm" params="prefix">-->
     <!--<joint name="${prefix}/elbow_joint" type="revolute">-->

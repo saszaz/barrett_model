@@ -25,6 +25,7 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <xacro:include filename="$(find barrett_model)/models/barrett_wam.transmission.xacro" />
   <xacro:include filename="$(find barrett_model)/models/common.urdf.xacro"/>
   <xacro:include filename="$(find barrett_model)/models/components.urdf.xacro"/>
 
@@ -32,6 +33,7 @@
     <xacro:wam prefix="${prefix}" parent_link="${parent_link}" xyz="${xyz}" rpy="${rpy}"/>
     <xacro:wam_wrist prefix="${prefix}"/>
     <xacro:wam_wrist_palm_stump prefix="${prefix}"/>
+    <xacro:wam_arm_transmission prefix="${prefix}" />
   </xacro:macro>
 
   <xacro:macro name="wam_4dof" params="prefix parent_link xyz rpy">
