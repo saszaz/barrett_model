@@ -3,7 +3,7 @@
 
   <gazebo>
     <plugin name="ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/barrett_wam</robotNamespace>
+      <robotNamespace>/wam</robotNamespace>
       <!--robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType-->
     </plugin>
   </gazebo>

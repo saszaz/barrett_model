@@ -1,6 +1,7 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <xacro:include filename="$(find barrett_model)/models/barrett_wam_hand.transmission.xacro" />
   <xacro:include filename="$(find barrett_model)/models/common.urdf.xacro"/>
 
   <!-- link properties -->
@@ -39,6 +40,8 @@
     <xacro:bhand_finger_1 prefix="${prefix}" primitive="${primitive}"/>
     <xacro:bhand_finger_2 prefix="${prefix}" primitive="${primitive}"/>
     <xacro:bhand_finger_3 prefix="${prefix}" primitive="${primitive}"/>
+
+    <xacro:wam_hand_transmission prefix="${prefix}" />
 
     <!-- don't use the gazebo gripper plugin, just slows down the sim -->
     <xacro:if value="false">
@@ -343,5 +346,7 @@
       </inertial>
     </link>
   </xacro:macro>
+
+
 
 </robot>
