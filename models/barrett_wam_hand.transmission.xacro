@@ -6,7 +6,7 @@
     <transmission name="${prefix}/finger_1/prox_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/finger_1/prox_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}/finger_1/prox_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -16,7 +16,7 @@
     <transmission name="${prefix}/finger_1/med_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/finger_1/med_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}/finger_1/med_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -26,7 +26,7 @@
     <transmission name="${prefix}/finger_1/dist_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/finger_1/dist_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}/finger_1/dist_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -36,7 +36,7 @@
     <transmission name="${prefix}/finger_2/prox_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/finger_2/prox_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}/finger_2/prox_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -46,7 +46,7 @@
     <transmission name="${prefix}/finger_2/med_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/finger_2/med_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}/finger_2/med_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -56,7 +56,7 @@
     <transmission name="${prefix}/finger_2/dist_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/finger_2/dist_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}/finger_2/dist_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -66,7 +66,7 @@
     <transmission name="${prefix}/finger_3/med_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/finger_3/med_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}/finger_3/med_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -76,7 +76,7 @@
     <transmission name="${prefix}/finger_3/dist_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/finger_3/dist_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
       <actuator name="${prefix}/finger_3/dist_motor">
         <mechanicalReduction>1</mechanicalReduction>

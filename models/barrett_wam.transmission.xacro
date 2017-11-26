@@ -1,12 +1,17 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="wam_arm_transmission" params="prefix">
+  <xacro:macro name="wam_arm_transmission" params="prefix effort">
 
     <transmission name="${prefix}/base_yaw_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/base_yaw_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <xacro:if value="${effort}">
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </xacro:if>
+        <xacro:unless value="${effort}">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </xacro:unless>
       </joint>
       <actuator name="${prefix}/base_yaw_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -16,7 +21,12 @@
     <transmission name="${prefix}/shoulder_pitch_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/shoulder_pitch_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <xacro:if value="${effort}">
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </xacro:if>
+        <xacro:unless value="${effort}">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </xacro:unless>
       </joint>
       <actuator name="${prefix}/shoulder_pitch_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -26,7 +36,12 @@
     <transmission name="${prefix}/shoulder_yaw_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/shoulder_yaw_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <xacro:if value="${effort}">
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </xacro:if>
+        <xacro:unless value="${effort}">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </xacro:unless>
       </joint>
       <actuator name="${prefix}/shoulder_yaw_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -36,7 +51,12 @@
     <transmission name="${prefix}/elbow_pitch_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/elbow_pitch_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <xacro:if value="${effort}">
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </xacro:if>
+        <xacro:unless value="${effort}">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </xacro:unless>
       </joint>
       <actuator name="${prefix}/elbow_pitch_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -46,7 +66,12 @@
     <transmission name="${prefix}/wrist_yaw_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/wrist_yaw_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <xacro:if value="${effort}">
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </xacro:if>
+        <xacro:unless value="${effort}">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </xacro:unless>
       </joint>
       <actuator name="${prefix}/wrist_yaw_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -56,7 +81,12 @@
     <transmission name="${prefix}/wrist_pitch_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/wrist_pitch_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <xacro:if value="${effort}">
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </xacro:if>
+        <xacro:unless value="${effort}">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </xacro:unless>
       </joint>
       <actuator name="${prefix}/wrist_pitch_motor">
         <mechanicalReduction>1</mechanicalReduction>
@@ -66,7 +96,12 @@
     <transmission name="${prefix}/palm_yaw_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}/palm_yaw_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <xacro:if value="${effort}">
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </xacro:if>
+        <xacro:unless value="${effort}">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </xacro:unless>
       </joint>
       <actuator name="${prefix}/palm_yaw_motor">
         <mechanicalReduction>1</mechanicalReduction>
