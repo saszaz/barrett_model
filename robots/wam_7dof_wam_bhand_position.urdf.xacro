@@ -7,6 +7,6 @@
   <!-- Root link is in the world frame-->
   <link name = "world"/>
 
-  <xacro:wam_7dof prefix="wam" effort_control="true" parent_link="world" xyz="0.02 0.46 1" rpy="0 0 0" />
+  <xacro:wam_7dof prefix="wam" effort_control="false" parent_link="world" xyz="0.02 0.46 1" rpy="0 0 0" />
   <xacro:bhand prefix="wam/bhand" parent_link="wam/wrist_palm_link" xyz="0 0 0.06" rpy="0 0 ${PI}" primitive="true"/>
 </robot>
