@@ -28,6 +28,8 @@
   <xacro:include filename="$(find barrett_model)/models/hand.urdf.xacro"/>
   <xacro:include filename="$(find barrett_model)/models/common.urdf.xacro"/>
   <xacro:property name="b" value="0.5"/>
+  <xacro:property name="vel_lim" value="10.0"/>
+  <!-- <xacro:property name="vel_lim" value="2.0"/> -->
 
   <!-- Upper arm macros -->
   <xacro:macro name="wam_base" params="prefix parent_link xyz rpy">
@@ -72,7 +74,7 @@
       <child link="${prefix}/shoulder_yaw_link"/>
       <origin xyz="0 0 0.346" rpy="0 0 0"/>
       <axis xyz="0 0 1"/>
-      <limit effort="60" lower="-2.6" upper="2.6" velocity="2.0"/>
+      <limit effort="60" lower="-2.6" upper="2.6" velocity="${vel_lim}"/>
       <dynamics damping="${1.8*b}" friction="0"/>
     </joint>
     <gazebo reference="${prefix}/base_yaw_joint">
@@ -114,7 +116,7 @@
       <child link="${prefix}/shoulder_pitch_link"/>
       <origin xyz="0 0 0" rpy="${-PI/2} 0 0"/>
       <axis xyz="0 0 1"/>
-      <limit effort="60" lower="-1.985" upper="1.985" velocity="2.0"/>
+      <limit effort="60" lower="-1.985" upper="1.985" velocity="${vel_lim}"/>
       <dynamics damping="${0.5*b}" friction="0"/>
     </joint>
     <gazebo reference="${prefix}/shoulder_pitch_joint">
@@ -155,7 +157,7 @@
       <child link="${prefix}/upper_arm_link"/>
       <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
       <axis xyz="0 0 1"/>
-      <limit effort="45" lower="-2.8" upper="2.8" velocity="2.0"/>
+      <limit effort="45" lower="-2.8" upper="2.8" velocity="${vel_lim}"/>
       <dynamics damping="${1.5*b}" friction="0"/>
     </joint>
     <gazebo reference="${prefix}/shoulder_yaw_joint">
@@ -197,7 +199,7 @@
       <child link="${prefix}/forearm_link"/>
       <origin xyz="0.045 0 0.55" rpy="${-PI/2} 0 0"/>
       <axis xyz="0 0 1"/>
-      <limit effort="30" lower="-0.9" upper="${PI}" velocity="2.00"/>
+      <limit effort="30" lower="-0.9" upper="${PI}" velocity="${vel_lim}"/>
       <dynamics damping="${0.8*b}" friction="0"/>
     </joint>
     <gazebo reference="${prefix}/elbow_pitch_joint">
@@ -253,7 +255,7 @@
       <child link="${prefix}/wrist_yaw_link"/>
       <origin xyz="-0.045 -0.3 0" rpy="${PI/2} 0 0"/>
       <axis xyz="0 0 1"/>
-      <limit effort="10" lower="-4.55" upper="1.25" velocity="2.0"/>
+      <limit effort="10" lower="-4.55" upper="1.25" velocity="${vel_lim}"/>
       <dynamics damping="${0.5*b}" friction="0"/>
     </joint>
     <gazebo reference="${prefix}/wrist_yaw_joint">
@@ -294,7 +296,7 @@
       <child link="${prefix}/wrist_pitch_link"/>
       <origin xyz="0 0 0" rpy="${-PI/2} 0 0"/>
       <axis xyz="0 0 1"/>
-      <limit effort="10" lower="-1.5707" upper="1.5707" velocity="2.00"/>
+      <limit effort="10" lower="-1.5707" upper="1.5707" velocity="${vel_lim}"/>
       <dynamics damping="${0.1*b}" friction="0"/>
     </joint>
     <gazebo reference="${prefix}/wrist_pitch_joint">
@@ -335,7 +337,7 @@
       <child link="${prefix}/wrist_palm_link"/>
       <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
       <axis xyz="0 0 1"/>
-      <limit effort="10" lower="-3.0" upper="3.0" velocity="2.00"/><!-- 2.95 is a limit taken in from 3 due to saftey and differences between arms. -->
+      <limit effort="10" lower="-3.0" upper="3.0" velocity="${vel_lim}"/><!-- 2.95 is a limit taken in from 3 due to saftey and differences between arms. -->
       <dynamics damping="${0.3*b}" friction="0"/>
     </joint>
     <gazebo reference="${prefix}/palm_yaw_joint">
@@ -505,7 +507,7 @@
       <child link="${prefix}/stump_link"/>
       <origin xyz="0.045 0 0.55" rpy="${-PI/2} 0 0"/>
       <axis xyz="0 0 1"/>
-      <limit effort="15" lower="-0.9" upper="${PI}" velocity="2.0"/>
+      <limit effort="15" lower="-0.9" upper="${PI}" velocity="${vel_lim}"/>
       <dynamics damping="${0.1*b}" friction="0"/>
     </joint>
     <link name="${prefix}/stump_link" >
