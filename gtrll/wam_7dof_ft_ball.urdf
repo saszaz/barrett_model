@@ -225,12 +225,12 @@
     <color rgba="0.7 0.7 0.7 1.0"/>
   </material>
   <!-- Root link is in the world frame-->
-  <link name="world"/>
+<!--   <link name="world"/>
   <joint name="wam/wam_fixed_joint" type="fixed">
     <parent link="world"/>
     <child link="wam/base_link"/>
     <origin rpy="0 0 0" xyz="0.02 0.46 1"/>
-  </joint>
+  </joint> -->
   <link name="wam/base_link">
     <inertial>
       <origin xyz="0 0 0"/>
@@ -289,7 +289,7 @@
     </collision>
   </link>
   <!-- <joint name="wam/shoulder_pitch_joint" type="revolute"> -->
-  <joint name="wam/wam_j2" type="revolute">
+  <joint name="wam_j2" type="revolute">
     <parent link="wam/shoulder_yaw_link"/>
     <child link="wam/shoulder_pitch_link"/>
     <origin rpy="-1.57079632679 0 0" xyz="0 0 0"/>
@@ -325,7 +325,8 @@
       </geometry>
     </collision>
   </link>
-  <joint name="wam/shoulder_yaw_joint" type="revolute">
+  <!-- <joint name="wam/shoulder_yaw_joint" type="revolute"> -->
+  <joint name="wam_j3" type="revolute">
     <parent link="wam/shoulder_pitch_link"/>
     <child link="wam/upper_arm_link"/>
     <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
@@ -361,7 +362,8 @@
       </geometry>
     </collision>
   </link>
-  <joint name="wam/elbow_pitch_joint" type="revolute">
+  <!-- <joint name="wam/elbow_pitch_joint" type="revolute"> -->
+  <joint name="wam_j4" type="revolute">
     <parent link="wam/upper_arm_link"/>
     <child link="wam/forearm_link"/>
     <origin rpy="-1.57079632679 0 0" xyz="0.045 0 0.55"/>
@@ -412,7 +414,8 @@
       </geometry>
     </collision>
   </link>
-  <joint name="wam/wrist_yaw_joint" type="revolute">
+  <!-- <joint name="wam/wrist_yaw_joint" type="revolute"> -->
+  <joint name="wam_j5" type="revolute">
     <parent link="wam/forearm_link"/>
     <child link="wam/wrist_yaw_link"/>
     <origin rpy="1.57079632679 0 0" xyz="-0.045 -0.3 0"/>
@@ -450,7 +453,8 @@
       </geometry>
     </collision>
   </link>
-  <joint name="wam/wrist_pitch_joint" type="revolute">
+  <!-- <joint name="wam/wrist_pitch_joint" type="revolute"> -->
+  <joint name="wam_j6" type="revolute">
     <parent link="wam/wrist_yaw_link"/>
     <child link="wam/wrist_pitch_link"/>
     <origin rpy="-1.57079632679 0 0" xyz="0 0 0"/>
@@ -486,7 +490,8 @@
       </geometry>
     </collision>
   </link>
-  <joint name="wam/palm_yaw_joint" type="revolute">
+  <!-- <joint name="wam/palm_yaw_joint" type="revolute"> -->
+  <joint name="wam_j7" type="revolute">
     <parent link="wam/wrist_pitch_link"/>
     <child link="wam/wrist_palm_link"/>
     <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
@@ -512,7 +517,7 @@
   <joint name="wam/ft_sensor_joint" type="fixed">
     <parent link="wam/wrist_palm_link"/>
     <child link="wam/ft_sensor_link"/>
-    <origin rpy="0 0 0" xyz="0 0 0.0673"/>
+    <origin rpy="0 0 1.570796" xyz="0 0 0.0673"/>
   </joint>
   <link name="wam/ft_sensor_link">
     <inertial>
