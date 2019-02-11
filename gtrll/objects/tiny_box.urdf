@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<robot name="tiny_box">
+
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+
+  <link name="tiny_box/base_link">
+    <visual>
+      <geometry>
+        <box size="0.108 0.051 0.071"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+</robot>

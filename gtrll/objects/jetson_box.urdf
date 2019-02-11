@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<robot name="jetson_box">
+
+  <material name="green">
+    <color rgba="0 1 0 1"/>
+  </material>
+
+  <link name="jetson_box/base_link">
+    <visual>
+      <geometry>
+        <box size="0.2238 0.138 0.2223"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+  </link>
+
+</robot>
