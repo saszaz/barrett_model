@@ -517,7 +517,8 @@
   <joint name="wam/ft_sensor_joint" type="fixed">
     <parent link="wam/wrist_palm_link"/>
     <child link="wam/ft_sensor_link"/>
-    <origin rpy="0 0 1.570796" xyz="0 0 0.0673"/>
+    <origin rpy="0 0 0.0" xyz="0 0 0.0673"/>
+    <!-- <origin rpy="0 0 1.570796" xyz="0 0 0.0673"/> -->
   </joint>
   <link name="wam/ft_sensor_link">
     <inertial>
